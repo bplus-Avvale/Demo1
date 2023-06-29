@@ -1,0 +1,10 @@
+projection;
+//strict ( 1 );
+
+define behavior for ZTBAI_C_ANOTACION_M alias Anotacion
+{
+  use create;
+  use update;
+  use delete;
+  use action setAnular;
+}

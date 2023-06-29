@@ -1,0 +1,45 @@
+managed implementation in class zbp_tbai_i_anotacion_m unique;
+
+strict;
+
+define behavior for ZTBAI_I_ANOTACION_M alias Anotacion
+
+persistent table ztbai_anot
+
+lock master
+authorization master ( instance )
+//etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  //field ( readonly : update ) IdAnotacion;
+  field ( numbering : managed, readonly ) uuid;
+  field ( readonly ) CreatedBy;
+
+  action ( features : instance ) setAnular result [1] $self;
+
+  mapping for ztbai_anot
+    {
+      IdAnotacion        = id_anotacion;
+      IdEstado           = id_estado;
+      TipoFactura        = tipo_factura;
+      Bukrs              = Bukrs;
+      Belnr              = Belnr;
+      Gjahr              = Gjahr;
+      Buzei              = Buzei;
+      IdLote             = id_lote;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+
+
+
+
+
+
+}

@@ -1,0 +1,74 @@
+@Metadata.layer: #PARTNER
+
+
+@UI: {
+
+headerInfo.typeName: 'Anotación' ,
+headerInfo.typeNamePlural: 'Anotaciones' ,
+headerInfo.title: {
+    type: #STANDARD,
+    label: 'Anotacion',
+    value: 'IdAnotacion'
+},
+presentationVariant: [{sortOrder: [{by: 'IdAnotacion' , direction: #DESC }] }]
+
+}
+
+annotate view ztbai_C_Anotacion_U with
+{
+  
+  @UI.facet: [{
+      id: 'IdAnotacion',
+      purpose: #STANDARD,
+      position: 10,
+      label: 'Anotacion',
+      type: #IDENTIFICATION_REFERENCE
+  }]
+  
+  
+  
+  @UI.lineItem: [{position: 10 }]
+  @UI.identification: [{position: 10 }]
+  @UI.selectionField: [{position: 10}]
+  IdAnotacion;
+  @UI.lineItem: [{position: 20 }]
+  @UI.identification: [{position: 20 }]
+  @UI.selectionField: [{position: 20}]
+  IdEstado;
+  @UI.hidden: true
+  Estado;
+  @UI.lineItem: [{position: 40 }]
+  @UI.identification: [{position: 40 }]
+  TipoFactura;
+  @UI.lineItem: [{position: 50 }]
+  @UI.identification: [{position: 50 }]
+  Bukrs;
+  @UI.lineItem: [{position: 60 }]
+  @UI.identification: [{position: 60 }]
+  Belnr;
+  @UI.lineItem: [{position: 70 }]
+  @UI.identification: [{position: 70 }]
+  Gjahr;
+  @UI.lineItem: [{position: 80 }]
+  @UI.identification: [{position: 80 }]
+  Buzei;
+  @UI.lineItem: [{position: 90 }]
+  @UI.identification: [{position: 90 }]
+  IdLote;
+  @UI.lineItem: [{position: 100 }]
+  @UI.identification: [{position: 100 }]
+
+  CreatedBy;
+  @UI.hidden: true
+  CreatedAt;
+  @UI.hidden: true
+  LastChangedBy;
+  @UI.hidden: true
+  LastChangedAt;
+  @UI.hidden: true
+  LocalLastChangedAt;
+  @UI.hidden: true
+  /* Associations */
+  _estados_text;
+
+}

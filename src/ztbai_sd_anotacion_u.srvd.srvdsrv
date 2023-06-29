@@ -1,0 +1,5 @@
+@EndUserText.label: 'Definicion del servicio'
+define service ZTBAI_SD_ANOTACION_U {
+  expose ztbai_C_Anotacion_U as Anotacion;
+  expose ztbai_vm_estados as Estado;
+}

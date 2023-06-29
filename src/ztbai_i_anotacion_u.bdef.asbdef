@@ -1,0 +1,13 @@
+unmanaged implementation in class zbp_tbai_i_anotacion_u unique;
+strict ( 1 );
+
+define behavior for ztbai_I_Anotacion_U alias Anotacion
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'Servicio'
+define service ZTBAI_SD_ANOTACION_M {
+  expose ZTBAI_C_ANOTACION_M;
+  expose ztbai_vm_estados;
+  expose ZTBAI_VH_ESTADOs;
+}
